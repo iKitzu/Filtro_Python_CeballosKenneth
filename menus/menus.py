@@ -161,8 +161,7 @@ def gestion_servicios():
     print("")
     print("1. Servicios Pospago")
     print("2. Servicios Prepago")
-    print("3. Fibra optica")
-    print("4. Salir")
+    print("3. Salir")
     print("----------------------------------")
 
 def serv_pospago():
