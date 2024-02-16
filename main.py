@@ -25,11 +25,21 @@ while True:
         if ops==4:
             clear_screen()
             eliminar_usuarios()
+        if ops==5:
+            menu_principal()
     if opc==2:
         clear_screen()
         gestion_servicios()
-        opc=verify_opc("Digite su opción ",1,3)
-
+        opt=verify_opc("Digite su opción ",1,4)
+        if opt==1:
+            clear_screen()
+            serv_pospago()
+        if opt==2:
+            clear_screen()
+            serv_prepago()
+        if opt==3:
+            clear_screen()
+            
     if opc==3:
         clear_screen()
         salir_programa()

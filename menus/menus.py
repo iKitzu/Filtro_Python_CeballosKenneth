@@ -72,6 +72,7 @@ def listar_usuarios():
                     print("Dirección:", usuario["Dirección"])
                     print("Teléfono Celular:", usuario["Teléfono Celular"])
                     print("Teléfono Fijo:", usuario["Teléfono Fijo"])
+        
                     print("-" * 40)
     except FileNotFoundError:
         print("No hay usuarios registrados.")
@@ -158,11 +159,33 @@ def modificar_usuario():
 def gestion_servicios():
     print("------|Gestión de Servicios|------")
     print("")
-    print("1.  ")
-    print("2.  ")
-    print("3.  ")
-    print("")
+    print("1. Servicios Pospago")
+    print("2. Servicios Prepago")
+    print("3. Fibra optica")
+    print("4. Salir")
     print("----------------------------------")
+
+def serv_pospago():
+    print("------|Servicio Pospago|------")
+    print("")
+    print("1. Plan Recomendado")
+    print("2. Plan Pequeño a lo Grande")
+    print("3. Plan Mediano")
+    print("4. Plan Navega sin planes")
+    print("----------------------------------")  
+
+def serv_prepago():
+    print("------|Servicio Prepago|------")
+    print("")
+    print("1. Plan Recomendado")
+    print("2. Plan Lo justo")
+    print("3. Plan Waos")
+    print("4. Plan Imperdible ")
+    print("----------------------------------")  
+
+def menu_reportes():
+    print("------|Gestión de Productos|------")
+
 
 def salir_programa():
     print("------|Cerrando Programa|------")
@@ -172,22 +195,3 @@ def salir_programa():
     print("       Tenga buen dia")
     print("")
     print("--------------------------------")
-
-def asignar_usuario():
-    print("------|Actualizar Usuario|------")
-    print("")
-    id_usuario = input("Ingrese la ID del usuario a actualizar: ")
-
-    try:
-        with open("data/usuarios.json", "r") as file:
-            usuarios = json.load(file)
-            if not usuarios:
-                print("No hay usuarios registrados.")
-            else:
-                for usuario in usuarios:
-                    print("")
-
-    except FileNotFoundError:
-        print("No hay usuarios registrados.")
-
-    input("Presione Enter para continuar.")
